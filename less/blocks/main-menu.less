@@ -1,0 +1,60 @@
+.main-menu {
+  display: flex;
+}
+
+.main-menu__logo {
+  margin-right: 30px;
+}
+
+.main-menu__list {
+  .ul-reset();
+  display: flex;
+}
+
+.main-menu__item {
+  padding-top: 5px;
+  padding-bottom: 12px;
+
+  &--active {
+    border-bottom: 1px solid #ffcc00;
+
+    & > .main-menu__link {
+      color: #ffcc00;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.main-menu__link {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+
+  &--underline {
+    border-bottom: 1px dotted #ffffff;
+  }
+
+  &--icon {
+    position: relative;
+    padding-left: 20px;
+    color: #ff7d41;
+
+    &::before {
+      .pseudo();
+      top: -10px;
+      left: 0;
+      width: 18px;
+      height: 25px;
+      background: url("http://static.gdeetotdom.ru/skin/ged6/img/ico/header-icons.png") no-repeat 0 -108px;
+    }
+  }
+
+  &--absolute-logo {
+    display: block;
+    width: 100px;
+  }
+}

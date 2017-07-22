@@ -1,0 +1,37 @@
+.user-menu {
+  .ul-reset();
+  display: flex;
+}
+
+.user-menu__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.user-menu__link {
+  position: relative;
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #aaaaaa;
+
+  &::before {
+    .pseudo();
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: url("http://static.gdeetotdom.ru/skin/ged6/img/ico/header-icons.png") no-repeat;
+  }
+
+  &--ads::before {
+    background-position: -50px 0;
+  }
+
+  &--singup::before {
+    background-position: 0 -65px;
+  }
+
+  &--signin::before {
+    background-position: 0 -35px;
+  }
+}
