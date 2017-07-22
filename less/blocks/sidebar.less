@@ -1,4 +1,27 @@
 .sidebar {
   width: 250px;
   flex-shrink: 0;
+  background-color: @sidebar-bg-color;
+}
+
+.sidebar__item {
+  padding: 10px 15px;
+  border: 1px solid @border-color;
+
+  &:not(:first-child) {
+    margin-top: -1px;
+  }
+}
+
+.sidebar__item-title {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+  color: @text-color;
+}
+
+.sidebar__item-desc {
+  font-size: 11px;
+  line-height: 15px;
+  color: @text-color-light;
 }
