@@ -1,0 +1,22 @@
+.remaining-time {
+  padding: 8px 15px;
+  border-radius: 3px;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #2e2e2e;
+  color: #fbc02d;
+}
+
+.remaining-time__hour,
+.remaining-time__minute {
+  position: relative;
+  margin-right: 3px;
+  padding-right: 12px;
+
+  &::after {
+    .pseudo();
+    content: ":";
+    top: 0;
+    right: 0;
+  }
+}

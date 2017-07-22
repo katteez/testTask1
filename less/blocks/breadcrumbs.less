@@ -1,0 +1,25 @@
+.breadcrumbs {
+  .ul-reset();
+  margin-bottom: 20px;
+  font-size: 0;
+}
+
+.breadcrumbs-item {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: top;
+}
+
+.breadcrumbs-link {
+  position: relative;
+  font-size: 12px;
+  line-height: 16px;
+  color: @link-color;
+}
+
+.breadcrumbs-link[href]::after {
+  .pseudo();
+  content: ">";
+  top: 0px;
+  right: -13px;
+}
