@@ -62,6 +62,16 @@ gulp.task("html:update", ["html:copy"], function(done) {
   done();
 });
 
+gulp.task("js", function () {
+  return gulp.src("js/*.js")
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("js:watch", ["js"], function(done) {
+  server.reload();
+  done();
+});
+
 gulp.task("serve", function() {
   server.init({
     server: "build/",
@@ -73,6 +83,7 @@ gulp.task("serve", function() {
 
   gulp.watch("less/**/*.less", ["style"]);
   gulp.watch("*.html", ["html:update"]);
+  gulp.watch("js/*.js", ["js:watch"]);
 });
 
 gulp.task("build", function(done) {
