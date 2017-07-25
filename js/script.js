@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-var pageHeaderElem = document.querySelector(".page-header--bottom");
+var pageHeaderElem = document.querySelector('.page-header--bottom');
 var pageHeaderElemSourceTop = pageHeaderElem.getBoundingClientRect().top + window.pageYOffset;
 
 window.onscroll = function() {
